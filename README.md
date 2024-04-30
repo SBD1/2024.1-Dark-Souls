@@ -1,6 +1,6 @@
 # [2024.1] Dark Souls
 <div align="center">
-    <img src=""/>
+    <img src="img/assets/Logo-darksouls.jpg"/>
     <p> Figura 1: Logo de Dark Souls.</p> 
 </div>
 
