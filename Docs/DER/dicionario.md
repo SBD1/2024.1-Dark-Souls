@@ -18,7 +18,7 @@
 | Vida | Vida que o personagem possui no momento | int | 1-100 | | not null |
 | Resistência | Defesa que um determinado do status,  de 0 até 100 | int | 0 até 100 | | not null |
 | Status | Relação se está vivo ou morto |  | de 0 a 1 | | enum |
-| Vigor | Status da vida | int | | | not null |
+| Vigor | Status da vida | int |  | | not null |
 | Destreza | Velocidade de ataque | int | 0 até 100 | | not null |
 | Força | Poder de ataque | int | 0 até 100 | | not null |
 | Nível |  nível do jogador | int | 0 até 1000 | FK | not null |
@@ -87,45 +87,50 @@
 
 | Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
 | --- | --- | --- | --- | --- | --- |
-| id_personagem  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Nome  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Vida  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Defesa  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Status  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Função  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Fraqueza  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Resistência  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
+| id_personagem  | Código identificador único de um jogador | int | 1-5000 | | not null |
+| Nome  | Identifica o tipo de personagem | int | 1-5000 | | not null |
+| Vida  | Vida que o personagem possui no momento	 | int | 1-100 | | not null |
+| Defesa  | Identifica a defesa de personagem	 | int | 0 a 100 | | not null |
+| Status  | Identifica o tipo de status do personagem | int |  | | enum |
+| Função  | Identifica a função de personagem	 | int	 |  | | not null |
+| Fraqueza  | Identifica o ponto fraco de personagem | int	 |  | | not null |
+| Resistência  | Identifica a resistência de personagem	 | int	 | 0 a 100 | | not null |
 
 ### Tabela: AMIGO
 
 | Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
 | --- | --- | --- | --- | --- | --- |
-| id_personagem  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Nome  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Vida  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Defesa  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Status  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Função  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Fraqueza  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Resistência  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
+| id_personagem  | Código identificador único de um jogador | int | 1-5000 | | not null |
+| Nome  | Identifica o tipo de personagem |  | 1-5000 | | not null |
+| Vida  | Vida que o personagem possui no momento	 | int | 1-100 | | not null |
+| Defesa  | Identifica a defesa de personagem	 | int | 0 a 100 | | not null |
+| Status  | Identifica o tipo de status do personagem | int |  | | enum |
+| Função  | Identifica a função de personagem	 | int	 |  | | not null |
+| Fraqueza  | Identifica o ponto fraco de personagem | int	 |  | | not null |
+| Resistência  | Identifica a resistência de personagem	 | int	 | 0 a 100 | | not null |
 
 ### Tabela: ÁREA
 
 | Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
 | --- | --- | --- | --- | --- | --- |
-| id_area  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Nome  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Região  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
+| id_area  | Identifica o tipo de area  | int | 1-100 | pk | not null |
+| Nome  | Identifica o nome da area | varchar[30] | a-z, A-Z | | not null |
+| Região  | Lugar no Mapa | int | 1-30 | fk | not null |
 
 ### Tabela: REGIÃO
 
 | Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
 | --- | --- | --- | --- | --- | --- |
-| id_regiao  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
-| Nome  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
+| id_regiao  | Identifica a região | int | 1-30 | pk | not null |
+| Nome  | Identifica o nome da região | varchar[30] | a-z, A-Z | | not null |
 
-A PARTIR DAQUI
+### Tabela: Inventario 
 
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_player | Identificador do jogador | int | 1-5000 | pk/fk | not null |
+| Slot_ID | Espaço de armazenar item | int | 1-500 | | not null |
+| Item | Identificador da instancia | int | 1-5000 | | not null |
 
 ### Instância_de_Item
 
