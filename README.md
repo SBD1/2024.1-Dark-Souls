@@ -21,6 +21,6 @@ Este repositório pertence à turma de Sistemas de Banco de Dados 1 (SBD1) do pr
 
 ## Entrega 1
 [Diagrama Entidade-Relacionamento](https://github.com/SBD1/2024.1-Dark-Souls/tree/main/Docs/DER) <br>
-[Modelo Relacional](https://github.com/SBD1/2024.1-Dark-Souls/tree/main/Docs/MER) <br>
+[Modelo Relacional](https://github.com/SBD1/2024.1-Dark-Souls/tree/main/Docs/MREL) <br>
 [Apresentação em vídeo](https://drive.google.com/drive/folders/1jsOPc5IfLc40cTsItg90vuSgNKEpWZtJ)
 </div>
