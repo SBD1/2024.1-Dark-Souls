@@ -123,3 +123,80 @@
 | --- | --- | --- | --- | --- | --- |
 | id_regiao  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
 | Nome  | Identifica o tipo de personagem | varchar[30] | a-z, A-Z | | not null |
+
+A PARTIR DAQUI
+
+
+### Instância_de_Item
+
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_instancia | Código identificador a instancia de um item | int | 1-5000 | pk | not null |
+| id_item | Identifica o item | int | 1-5000 | | not null |
+| id_area | identifica a area | int | 1-100 | | not null |
+
+
+### Tabela: Armadura
+
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_item | Identifica o item | int | 1-5000 | pk | not null |
+| Valor | Indentifica o preço do item | int | 1-99999 | | not null |
+| Peso | Indentifica o peso do item | int | 0-100 | | not null |
+| Nome | Nome do item| varchar[30] |  a-z, A-Z | | not null |
+| Descrição | Descrição do item | varchar[255] | a-z, A-Z | | Not null |
+| Requisitos | Requisitos de habilidades para usar um item | int |0-99 | | not null |
+| Nível |  nível do equipamento | int | 0 até 10 |  | not null |
+| Durabilidade | condição do equipamento | int | 0 até 100 | | not null |
+| Resistencia | Redução de dano | int | 0 até 100 | | not null |
+
+
+### Tabela: Arma
+
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_item | Identifica o item | int | 1-5000 | pk | not null |
+| Valor | Indentifica o preço do item | int | 1-99999 | | not null |
+| Peso | Indentifica o peso do item | int | 0-100 | | not null |
+| Nome | Nome do item| varchar[30] |  a-z, A-Z | | not null |
+| Descrição | Descrição do item | varchar[255] | a-z, A-Z | | Not null |
+| Requisitos | Requisitos de habilidades para usar um item | int |0-99 | | not null |
+| Nível |  nível do equipamento | int | 0 até 10 |  | not null |
+| Durabilidade | condição do equipamento | int | 0 até 100 | | not null |
+| Dano | Dano causado pela arma | int | 1 até 9999 | | not null |
+
+
+### Tabela: Poção
+
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_item | Identifica o item | int | 1-5000 | pk | not null |
+| Valor | Indentifica o preço do item | int | 1-99999 | | not null |
+| Peso | Indentifica o peso do item | int | 0-100 | | not null |
+| Nome | Nome do item| varchar[30] |  a-z, A-Z | | not null |
+| Descrição | Descrição do item | varchar[255] | a-z, A-Z | | Not null |
+| Requisitos | Requisitos de habilidades para usar um item | int |0-99 | | not null |
+| Destreza | Velocidade de ataque | int | 0 até 100 | | not null |
+| Nível |  nível do equipamento | int | 0 até 10 |  | not null |
+| Efeito |  Efeito da poção no jogador | varchar[30] | a-z, A-Z |  | not null |
+| Quantidade |  Quantidade de poção no inventario | int | 0 até 30 |  | not null |
+
+
+### Tabela: Impulso
+
+| Nome | Descrição | Tipo de Dado | Valores permitidos | Chave | Restrições de domínio |
+| --- | --- | --- | --- | --- | --- |
+| id_item | Identifica o item | int | 1-5000 | pk | not null |
+| Valor | Indentifica o preço do item | int | 1-99999 | | not null |
+| Peso | Indentifica o peso do item | int | 0-100 | | not null |
+| Nome | Nome do item| varchar[30] |  a-z, A-Z | | not null |
+| Descrição | Descrição do item | varchar[255] | a-z, A-Z | | Not null |
+| Requisitos | Requisitos de habilidades para usar um item | int |0-99 | | not null |
+| Destreza | Velocidade de ataque | int | 0 até 100 | | not null |
+| Nível |  nível do equipamento | int | 0 até 10 |  | not null |
+| Efeito |  Efeito da poção no jogador | varchar[30] | a-z, A-Z |  | not null |
+| Quantidade |  Quantidade de poção no inventario | int | 0 até 30 |  | not null |
+| Tipo |  Tipo de efeito no jogador | varchar[30] |  a-z, A-Z |  | not null |
+
+
+
