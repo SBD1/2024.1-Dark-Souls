@@ -91,8 +91,7 @@
 | Vida  | Vida que o fire keeper possui no momento	 | int | 1-100 | | not null |
 | Defesa  | Identifica a defesa do fire keeper	 | int | 0-100 | | not null |
 | Status  | Identifica o status do fire keeper | enum(Vivo, Morto) | Vivo, Morto | | not null |
-| Função  | Identifica a função do fire keeper	 | int	 |  | | not null |
-| Fraqueza  | Identifica o ponto fraco do fire keeper | int	 |  | | not null |
+| Função  | Identifica a função do fire keeper	 | enum(upar pc, upar poçao)	 | upar pc, upar poçao | | not null |
 | Resistência  | Identifica a resistência do fire keeper	 | int	 | 0-100 | | not null |
 
 ### Tabela: AMIGO
